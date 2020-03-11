@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/Load_Vak_CSV" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
