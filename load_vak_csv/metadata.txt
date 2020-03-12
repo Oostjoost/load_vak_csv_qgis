@@ -6,7 +6,7 @@
 name=Load Vak CSV
 qgisMinimumVersion=3.0
 description=Vak.csv inladen in QGIS
-version=0.1
+version=0.3
 author=Joost Deen/SafetyCT
 email=j.deen@safetyct.com
 

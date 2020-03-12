@@ -136,9 +136,9 @@ class LoadVakCsvDialog(QtWidgets.QDialog, FORM_CLASS):
                 coorArr = []
                 
                 if countPolygons == 1:
-                    coorArr.append('MultiPolygon((')
+                    coorArr.append('MultiPolygon(')
                 else:
-                    coorArr.append('MultiPolygon((')
+                    coorArr.append('MultiPolygon(')
                 
                 for j in range(countPolygons):
                     startPoint.append(int(row[4 + 3 * j]) + 2 + 3 * countPolygons)
@@ -148,7 +148,7 @@ class LoadVakCsvDialog(QtWidgets.QDialog, FORM_CLASS):
                         endPoint.append(len(row))
                      
                 for j in range(countPolygons):
-                    coorArr.append('(')
+                    coorArr.append('((')
                     for i in range(startPoint[j], endPoint[j], 2):
                         if j == 0 and i == startPoint[0]:
                             tempCoorX = str(row[i].split('|')[1]).replace(',','.')
@@ -170,7 +170,7 @@ class LoadVakCsvDialog(QtWidgets.QDialog, FORM_CLASS):
                         else:
                             coorArr.append(')))')                
                     else:
-                        coorArr.append('),')
+                        coorArr.append(')),')
                 
                 tempArr.append(''.join(coorArr))
                 exportFile.append(tempArr)
