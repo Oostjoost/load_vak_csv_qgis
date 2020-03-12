@@ -109,6 +109,7 @@ class LoadVakCsvDialog(QtWidgets.QDialog, FORM_CLASS):
        
     def convertOracle(self):
         exportFile = []
+        self.exportMap = self.outputFile.text()
         header = ['id', 'name', 'oracle_gtype', 'crs', 'wkt_geom']
         exportFile.append(header)
         
@@ -135,7 +136,7 @@ class LoadVakCsvDialog(QtWidgets.QDialog, FORM_CLASS):
                 coorArr = []
                 
                 if countPolygons == 1:
-                    coorArr.append('Polygon(')
+                    coorArr.append('MultiPolygon((')
                 else:
                     coorArr.append('MultiPolygon((')
                 
@@ -165,7 +166,7 @@ class LoadVakCsvDialog(QtWidgets.QDialog, FORM_CLASS):
                             coorArr.append(',')
                     if j == countPolygons - 1:
                         if countPolygons == 1:
-                            coorArr.append('))')
+                            coorArr.append(')))')
                         else:
                             coorArr.append(')))')                
                     else:

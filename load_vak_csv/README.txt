@@ -1,3 +1,11 @@
+Plugin Builder Results
+
+Your plugin LoadVakCsv was created in:
+    C:/Users/joost/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins\load_vak_csv
+
+Your QGIS plugin directory is located at:
+    C:/Users/joost/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins
+
 What's Next:
 
   * Copy the entire directory containing your new plugin to the QGIS plugin
